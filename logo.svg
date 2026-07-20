@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Goldener Apfel – Emblem">
+  <defs>
+    <linearGradient id="ga-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4b56e"/>
+      <stop offset="1" stop-color="#a9863f"/>
+    </linearGradient>
+    <style>
+      .leaf { fill: url(#ga-gold); }
+      .vein { stroke: rgba(83,60,18,.25); stroke-width: .8; fill: none; }
+      .stem { stroke: url(#ga-gold); stroke-width: 2.6; fill: none; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Laurel wreath: leaves placed tangentially around a circle (r=64), gap at top & bottom -->
+  <g id="wreath">
+    <!-- crossing stems at the bottom -->
+    <path class="stem" d="M100 168 C 90 156 82 140 80 122"/>
+    <path class="stem" d="M100 168 C 110 156 118 140 120 122"/>
+
+    <!-- right branch -->
+    <g transform="translate(116.6,38.2) rotate(-75)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(141.1,51.0) rotate(-50)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(158.0,73.0) rotate(-25)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(164.0,100.0) rotate(0)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(158.0,127.0) rotate(25)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(141.1,149.0) rotate(50)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(116.6,161.8) rotate(75)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+
+    <!-- left branch (mirror) -->
+    <g transform="translate(83.4,38.2) rotate(75)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(58.9,51.0) rotate(50)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(42.0,73.0) rotate(25)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(36.0,100.0) rotate(0)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(42.0,127.0) rotate(-25)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(58.9,149.0) rotate(-50)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+    <g transform="translate(83.4,161.8) rotate(-75)"><path class="leaf" d="M0 0 C -4 -7 -4 -18 0 -26 C 4 -18 4 -7 0 0 Z"/><path class="vein" d="M0 -1 L0 -24"/></g>
+  </g>
+
+  <!-- Apple -->
+  <g id="apple">
+    <path class="stem" d="M100 74 C 100 66 99 60 98 56"/>
+    <path class="leaf" d="M99 66 C 104 56 115 54 122 57 C 119 66 110 70 100 70 Z"/>
+    <path d="M100 72 C 86 72 79 82 79 94 C 79 108 89 118 100 118 C 111 118 121 108 121 94 C 121 82 114 72 100 72 Z" fill="url(#ga-gold)"/>
+    <path d="M100 78 C 96 80 95 86 96 92" stroke="rgba(83,60,18,.18)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
