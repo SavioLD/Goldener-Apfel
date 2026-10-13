@@ -10,7 +10,7 @@
      Bitte vor dem Livegang ersetzen (mit echten Daten):
        • Telefonnummer:  0741 / 000 000   →  tel:+497410000000
        • WhatsApp-Nr.:   49741000000       (wa.me/49741000000)
-       • Anschrift:      Hauptstraße 00, 78628 Rottweil
+       • Anschrift:      Flözlinstraße 14, 78628 Rottweil
      E-Mail (info@goldenerapfel-rottweil.de) ist bereits eingetragen.
 
      FOTOS: Die Seite bindet Bilder aus dem Ordner  assets/  ein.
@@ -87,7 +87,7 @@
   "founder": { "@type": "Person", "name": "Samuel Haftstein", "jobTitle": "Pächter & Koch" },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Hauptstraße 00",
+    "streetAddress": "Flözlinstraße 14",
     "postalCode": "78628",
     "addressLocality": "Rottweil",
     "addressRegion": "BW",
@@ -98,7 +98,7 @@
     { "@type": "AdministrativeArea", "name": "Landkreis Rottweil" }
   ],
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "23:00" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "17:00", "closes": "23:00" }
   ],
   "acceptsReservations": "True"
 }
@@ -112,16 +112,23 @@
   "name": "Speisekarte Goldener Apfel",
   "inLanguage": "de-DE",
   "hasMenuSection": [
+    { "@type": "MenuSection", "name": "Warme Speisen", "hasMenuItem": [
+      { "@type": "MenuItem", "name": "Schnitzel mit Spätzle und Rahmsoße", "offers": { "@type": "Offer", "price": "19.50", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Maultaschen mit Kartoffelsalat und Röstzwiebeln", "offers": { "@type": "Offer", "price": "15.50", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Gemüsemaultaschen mit Kartoffelsalat und Röstzwiebeln", "offers": { "@type": "Offer", "price": "15.50", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Cordon Bleu mit Pommes", "offers": { "@type": "Offer", "price": "21.50", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Fleischküchle mit Kartoffelsalat", "offers": { "@type": "Offer", "price": "17.00", "priceCurrency": "EUR" } }
+    ]},
     { "@type": "MenuSection", "name": "Kalte Speisen", "hasMenuItem": [
       { "@type": "MenuItem", "name": "Gemischter Blattsalat", "offers": { "@type": "Offer", "price": "7.00", "priceCurrency": "EUR" } },
       { "@type": "MenuItem", "name": "Hausgemachter \"Elsässischer\" Wurstsalat", "offers": { "@type": "Offer", "price": "15.00", "priceCurrency": "EUR" } },
-      { "@type": "MenuItem", "name": "Hausgemachter \"Schwäbischer\" Wurstsalat", "offers": { "@type": "Offer", "price": "14.00", "priceCurrency": "EUR" } }
+      { "@type": "MenuItem", "name": "Hausgemachter \"Schwäbischer\" Wurstsalat", "offers": { "@type": "Offer", "price": "15.00", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Käsesalat", "offers": { "@type": "Offer", "price": "15.00", "priceCurrency": "EUR" } }
     ]},
-    { "@type": "MenuSection", "name": "Warme Speisen", "hasMenuItem": [
-      { "@type": "MenuItem", "name": "Wiener Schnitzel vom Kalb", "offers": { "@type": "Offer", "price": "24.00", "priceCurrency": "EUR" } },
-      { "@type": "MenuItem", "name": "Wiener Schnitzel vom Schwein", "offers": { "@type": "Offer", "price": "12.00", "priceCurrency": "EUR" } },
-      { "@type": "MenuItem", "name": "Cordon Bleu", "offers": { "@type": "Offer", "price": "16.00", "priceCurrency": "EUR" } },
-      { "@type": "MenuItem", "name": "Mistkratzerle", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "EUR" } }
+    { "@type": "MenuSection", "name": "Desserts", "hasMenuItem": [
+      { "@type": "MenuItem", "name": "Vanilleeis mit Obst der Saison", "offers": { "@type": "Offer", "price": "6.50", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Affogato", "offers": { "@type": "Offer", "price": "4.50", "priceCurrency": "EUR" } },
+      { "@type": "MenuItem", "name": "Käseteller", "offers": { "@type": "Offer", "price": "12.50", "priceCurrency": "EUR" } }
     ]}
   ]
 }
@@ -213,7 +220,7 @@
           <span>Unser Gastgarten mitten in Rottweil</span>
         </figcaption>
       </figure>
-      <span class="hero__badge"><span class="dot"></span> Mo – Fr ab 17:00 Uhr für Sie geöffnet</span>
+      <span class="hero__badge"><span class="dot"></span> Täglich ab 17:00 Uhr für Sie geöffnet</span>
     </div>
   </div>
 </section>
@@ -275,8 +282,8 @@
         Was Sie erwartet? Eine behutsame Weiterführung der Tradition – mit klassischer,
         gutbürgerlicher Küche, ehrlichen Produkten aus der Region und der einen oder
         anderen liebevoll neu interpretierten Idee. Vom „Elsässer“ Wurstsalat über das
-        Wiener Schnitzel bis zum Mistkratzerle: Bei uns kommt auf den Tisch, was schmeckt
-        und Freude macht.
+        knusprige Schnitzel mit Spätzle bis zum Cordon Bleu und den Maultaschen: Bei uns
+        kommt auf den Tisch, was schmeckt und Freude macht.
       </p>
       <p>
         Ob auf ein Feierabendbier, zum gemütlichen Abendessen mit der Familie oder zur
@@ -348,6 +355,30 @@
       <span class="menu-card__ribbon">Unsere Speisekarte</span>
 
       <div class="menu-group">
+        <div class="menu-group__title">Warme Speisen</div>
+        <div class="dish">
+          <div class="dish__main"><div class="dish__name">Schnitzel mit Spätzle und Rahmsoße</div><div class="dish__desc">Unsere Tagesempfehlung</div></div>
+          <span class="dish__dots"></span><span class="dish__price">19,50 €</span>
+        </div>
+        <div class="dish">
+          <div class="dish__main"><div class="dish__name">Maultaschen mit Kartoffelsalat</div><div class="dish__desc">und Röstzwiebeln</div></div>
+          <span class="dish__dots"></span><span class="dish__price">15,50 €</span>
+        </div>
+        <div class="dish">
+          <div class="dish__main"><div class="dish__name">Gemüsemaultaschen mit Kartoffelsalat</div><div class="dish__desc">und Röstzwiebeln</div></div>
+          <span class="dish__dots"></span><span class="dish__price">15,50 €</span>
+        </div>
+        <div class="dish">
+          <div class="dish__main"><div class="dish__name">Cordon Bleu mit Pommes</div><div class="dish__desc">vom Schwein, gefüllt mit Münsterkäse und Schwarzwälder Schinken</div></div>
+          <span class="dish__dots"></span><span class="dish__price">21,50 €</span>
+        </div>
+        <div class="dish">
+          <div class="dish__main"><div class="dish__name">Fleischküchle mit Kartoffelsalat</div><div class="dish__desc">nach Omas Rezeptur</div></div>
+          <span class="dish__dots"></span><span class="dish__price">17,00 €</span>
+        </div>
+      </div>
+
+      <div class="menu-group">
         <div class="menu-group__title">Kalte Speisen</div>
         <div class="dish">
           <div class="dish__main"><div class="dish__name">Gemischter Blattsalat</div><div class="dish__desc">mit Kräutervinaigrette und eingelegtem Gemüse</div></div>
@@ -359,63 +390,36 @@
         </div>
         <div class="dish">
           <div class="dish__main"><div class="dish__name">Hausgemachter „Schwäbischer“ Wurstsalat</div><div class="dish__desc">mit Brot von der Bäckerei Mink</div></div>
-          <span class="dish__dots"></span><span class="dish__price">14,00 €</span>
-        </div>
-      </div>
-
-      <div class="menu-group">
-        <div class="menu-group__title">Warme Speisen</div>
-        <div class="dish">
-          <div class="dish__main"><div class="dish__name">Wiener Schnitzel vom Kalb</div></div>
-          <span class="dish__dots"></span><span class="dish__price">24,00 €</span>
+          <span class="dish__dots"></span><span class="dish__price">15,00 €</span>
         </div>
         <div class="dish">
-          <div class="dish__main"><div class="dish__name">Wiener Schnitzel vom Schwein</div></div>
-          <span class="dish__dots"></span><span class="dish__price">12,00 €</span>
-        </div>
-        <div class="dish">
-          <div class="dish__main"><div class="dish__name">Cordon Bleu</div><div class="dish__desc">vom Schwein, gefüllt mit Münsterkäse und Schwarzwälder Schinken</div></div>
-          <span class="dish__dots"></span><span class="dish__price">16,00 €</span>
-        </div>
-        <div class="dish">
-          <div class="dish__main"><div class="dish__name">Mistkratzerle</div><div class="dish__desc">30 min. Zubereitungszeit</div></div>
-          <span class="dish__dots"></span><span class="dish__price">22,00 €</span>
-        </div>
-      </div>
-
-      <div class="menu-group">
-        <div class="menu-group__title">Vegetarisch</div>
-        <div class="dish">
-          <div class="dish__main"><div class="dish__name">Käsespätzle</div></div>
-          <span class="dish__dots"></span><span class="dish__price">12,00 €</span>
-        </div>
-        <div class="dish">
-          <div class="dish__main"><div class="dish__name">Graupenrisotto</div><div class="dish__desc">mit saisonalem Gemüse</div></div>
-          <span class="dish__dots"></span><span class="dish__price">16,00 €</span>
+          <div class="dish__main"><div class="dish__name">Käsesalat</div><div class="dish__desc">mit Brot von der Bäckerei Mink</div></div>
+          <span class="dish__dots"></span><span class="dish__price">15,00 €</span>
         </div>
       </div>
 
       <div class="menu-group">
         <div class="menu-group__title">Beilagen</div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Brot</div></div><span class="dish__dots"></span><span class="dish__price">2,00 €</span></div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Beilagensalat</div></div><span class="dish__dots"></span><span class="dish__price">4,50 €</span></div>
         <div class="dish"><div class="dish__main"><div class="dish__name">Pommes frites</div></div><span class="dish__dots"></span><span class="dish__price">4,50 €</span></div>
         <div class="dish"><div class="dish__main"><div class="dish__name">Kartoffelsalat</div></div><span class="dish__dots"></span><span class="dish__price">4,50 €</span></div>
-        <div class="dish"><div class="dish__main"><div class="dish__name">Spätzle</div></div><span class="dish__dots"></span><span class="dish__price">5,00 €</span></div>
-        <div class="dish"><div class="dish__main"><div class="dish__name">Vichy Karotten</div></div><span class="dish__dots"></span><span class="dish__price">4,00 €</span></div>
       </div>
 
       <div class="menu-group">
         <div class="menu-group__title">Soßen & Dips</div>
-        <div class="dish"><div class="dish__main"><div class="dish__name">Kaltgerührte Preiselbeeren</div></div><span class="dish__dots"></span><span class="dish__price">2,00 €</span></div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Ketchup / Mayo / Senf</div></div><span class="dish__dots"></span><span class="dish__price">0,50 €</span></div>
         <div class="dish"><div class="dish__main"><div class="dish__name">Hausgemachte Senf-Mayo</div></div><span class="dish__dots"></span><span class="dish__price">2,00 €</span></div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Kaltgerührte Preiselbeeren</div></div><span class="dish__dots"></span><span class="dish__price">2,00 €</span></div>
         <div class="dish"><div class="dish__main"><div class="dish__name">Rahmsoße</div></div><span class="dish__dots"></span><span class="dish__price">3,00 €</span></div>
         <div class="dish"><div class="dish__main"><div class="dish__name">Braten Jus</div></div><span class="dish__dots"></span><span class="dish__price">4,00 €</span></div>
       </div>
 
       <div class="menu-group">
-        <div class="menu-group__title">Dessert</div>
-        <div class="dish"><div class="dish__main"><div class="dish__name">Panna Cotta</div><div class="dish__desc">mit saisonalen Früchten</div></div><span class="dish__dots"></span><span class="dish__price">7,00 €</span></div>
-        <div class="dish"><div class="dish__main"><div class="dish__name">Affogato</div></div><span class="dish__dots"></span><span class="dish__price">4,50 €</span></div>
-        <div class="dish"><div class="dish__main"><div class="dish__name">Käseteller</div><div class="dish__desc">mit Feigensenf</div></div><span class="dish__dots"></span><span class="dish__price">11,00 €</span></div>
+        <div class="menu-group__title">Desserts</div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Vanilleeis</div><div class="dish__desc">mit Obst der Saison</div></div><span class="dish__dots"></span><span class="dish__price">6,50 €</span></div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Affogato</div><div class="dish__desc">Espresso auf einer Kugel Vanilleeis</div></div><span class="dish__dots"></span><span class="dish__price">4,50 €</span></div>
+        <div class="dish"><div class="dish__main"><div class="dish__name">Käseteller</div><div class="dish__desc">mit Feigensenf und Brot von der Bäckerei Mink</div></div><span class="dish__dots"></span><span class="dish__price">12,50 €</span></div>
       </div>
 
       <p class="menu-note">Bei Allergien und Unverträglichkeiten wenden Sie sich bitte an unser Servicepersonal.</p>
@@ -429,15 +433,12 @@
 <section class="section section--green" id="oeffnungszeiten">
   <div class="shell hours-wrap">
     <div class="hours-card">
-      <div class="hours-row"><span>Montag</span><span>17:00 – 23:00 Uhr</span></div>
-      <div class="hours-row"><span>Dienstag</span><span>17:00 – 23:00 Uhr</span></div>
-      <div class="hours-row"><span>Mittwoch</span><span>17:00 – 23:00 Uhr</span></div>
-      <div class="hours-row"><span>Donnerstag</span><span>17:00 – 23:00 Uhr</span></div>
-      <div class="hours-row"><span>Freitag</span><span>17:00 – 23:00 Uhr</span></div>
-      <div class="hours-row is-closed"><span>Samstag & Sonntag</span><span>Ruhetag</span></div>
+      <div class="hours-row"><span>Montag – Sonntag</span><span>ab 17:00 Uhr</span></div>
+      <div class="hours-row"><span>Warme Küche</span><span>17:00 – 21:00 Uhr</span></div>
+      <div class="hours-row"><span>Ab 21:00 Uhr</span><span>Open End · je nach Betrieb</span></div>
       <div class="hours-kitchen">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        Warme Küche bis 21:00 Uhr
+        Täglich für Sie geöffnet
       </div>
     </div>
     <div class="hours-aside">
@@ -551,6 +552,7 @@
         <span class="eyebrow eyebrow--solo">Am schnellsten geht's so</span>
         <h2>Direkt erreichen.</h2>
         <p>Für eine Reservation am selben Abend rufen Sie uns am besten kurz an oder schreiben uns eine WhatsApp – wir antworten so schnell wie möglich.</p>
+        <p style="margin-top:12px;"><strong>Tipp:</strong> Für Anfragen und Terminabsprachen sind wir unter der Woche (Mo – Fr) am besten gegen 14:00 Uhr erreichbar.</p>
 
         <div class="contact-actions">
           <!-- TODO: echte Telefonnummer eintragen -->
@@ -571,7 +573,7 @@
             <div>
               <div class="contact-item__label">Adresse</div>
               <!-- TODO: echte Anschrift eintragen -->
-              <div class="contact-item__value">Hauptstraße 00 · 78628 Rottweil</div>
+              <div class="contact-item__value">Flözlinstraße 14 · 78628 Rottweil</div>
             </div>
           </div>
           <div class="contact-item">
@@ -592,7 +594,7 @@
             <span class="contact-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
             <div>
               <div class="contact-item__label">Öffnungszeiten</div>
-              <div class="contact-item__value">Mo – Fr · 17:00 – 23:00 Uhr</div>
+              <div class="contact-item__value">Täglich ab 17:00 Uhr</div>
             </div>
           </div>
         </div>
@@ -707,7 +709,7 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li>Hauptstraße 00</li>
+          <li>Flözlinstraße 14</li>
           <li>78628 Rottweil</li>
           <li>Tel.: <a href="tel:+497410000000">0741 / 000 000</a></li>
           <li><a href="mailto:info@goldenerapfel-rottweil.de">info@goldenerapfel-rottweil.de</a></li>
