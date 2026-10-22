@@ -142,7 +142,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .topbar__inner { display: flex; align-items: center; gap: 20px; min-height: 76px; }
 .topbar__logo { display: flex; align-items: center; gap: 12px; color: var(--green); }
 .topbar__logo:hover { color: var(--green); }
-.topbar__logo img { width: 46px; height: 46px; }
+.topbar__logo img { width: 52px; height: 52px; }
 .topbar__wordmark { display: flex; flex-direction: column; line-height: 1; }
 .topbar__wordmark b { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; letter-spacing: .04em; color: var(--green); }
 .topbar__wordmark small { font-family: var(--font-display); font-style: italic; font-size: .78rem; color: var(--gold-deep); margin-top: 3px; }
@@ -539,3 +539,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .intro-play svg { margin-left: 4px; }
 .intro-play:hover { transform: scale(1.06); background: var(--gold-light); }
 .intro-play.is-hidden { display: none; }
+
+
+/* Logo-Feinschliff mobil: Emblem gut erkennbar, Schriftzug kompakt */
+@media (max-width: 560px) {
+  .topbar__logo img { width: 50px; height: 50px; }
+  .topbar__logo { gap: 10px; }
+  .topbar__wordmark b { font-size: 1.02rem; }
+  .topbar__wordmark small { font-size: .66rem; }
+}
