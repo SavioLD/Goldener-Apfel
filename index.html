@@ -277,7 +277,7 @@
     <div class="intro-video">
       <div class="phone-frame">
         <iframe
-          src="https://www.youtube-nocookie.com/embed/q_JDxN8BaOk?autoplay=1&mute=1&loop=1&playlist=q_JDxN8BaOk&controls=1&playsinline=1&modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/q_JDxN8BaOk?autoplay=1&mute=1&loop=1&playlist=q_JDxN8BaOk&controls=1&playsinline=1&rel=0"
           title="Intro-Video – Goldener Apfel Rottweil"
           loading="lazy"
           allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
@@ -705,13 +705,14 @@
            Eigenes Backend? Einfach action= auf den eigenen Endpoint setzen.
       ==================================================================== -->
       <form class="contact-form" id="contactForm"
-            action="https://formsubmit.co/service@goldenerapfel-rottweil.de"
+            action="https://api.web3forms.com/submit"
             method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Neue Anfrage – Goldener Apfel" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_next" value="https://www.goldenerapfel-rottweil.de/?anfrage=ok#kontakt" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="access_key" value="9dcb1f3d-d1bd-4048-874e-727486fde3ff" />
+        <input type="hidden" name="subject" value="Neue Anfrage – Goldener Apfel" />
+        <input type="hidden" name="from_name" value="Goldener Apfel · Website" />
+        <input type="hidden" name="redirect" value="https://SavioLD.github.io/Goldener-Apfel/?anfrage=ok" />
+        <!-- Honeypot gegen Spam (Web3Forms) -->
+        <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <h3>Anfrage senden</h3>
         <p>Wir melden uns so schnell wie möglich bei Ihnen zurück.</p>
@@ -732,7 +733,7 @@
         <div class="field field--row">
           <div>
             <label for="cf-name">Name <span class="req">*</span></label>
-            <input type="text" id="cf-name" name="Name" required autocomplete="name" />
+            <input type="text" id="cf-name" name="name" required autocomplete="name" />
           </div>
           <div>
             <label for="cf-tel">Telefon</label>
@@ -742,7 +743,7 @@
 
         <div class="field">
           <label for="cf-mail">E-Mail <span class="req">*</span></label>
-          <input type="email" id="cf-mail" name="E-Mail" required autocomplete="email" />
+          <input type="email" id="cf-mail" name="email" required autocomplete="email" />
         </div>
 
         <div class="field field--row">
