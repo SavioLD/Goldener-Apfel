@@ -428,3 +428,79 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* ======================================================================
+   SLIDESHOW / SLIDER  (durchklickbare Bilder, mehrere Instanzen)
+====================================================================== */
+.slider { position: relative; overflow: hidden; }
+.slider .slider__slides { position: absolute; inset: 0; z-index: 0; }
+.slider__slide {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; display: block; opacity: 0; transition: opacity .7s ease; z-index: 1;
+}
+.slider__slide.is-active { opacity: 1; z-index: 2; }
+.slider__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(246,236,211,.9); color: var(--green);
+  display: grid; place-items: center; box-shadow: var(--shadow-sm);
+  opacity: 0; transition: opacity .2s ease, background .2s ease;
+}
+.slider:hover .slider__nav, .slider:focus-within .slider__nav { opacity: 1; }
+.slider__nav:hover { background: #fff; }
+.slider__nav--prev { left: 12px; } .slider__nav--next { right: 12px; }
+.slider__dots { position: absolute; left: 0; right: 0; bottom: 14px; z-index: 4; display: flex; gap: 8px; justify-content: center; }
+.slider__dot { width: 9px; height: 9px; padding: 0; border: none; border-radius: 50%; cursor: pointer; background: rgba(255,255,255,.55); box-shadow: 0 1px 2px rgba(0,0,0,.3); transition: background .2s ease, transform .2s ease; }
+.slider__dot.is-active { background: #fff; transform: scale(1.3); }
+@media (max-width: 640px) { .slider__nav { opacity: 1; width: 40px; height: 40px; } }
+
+/* Breiter Slider (Querformat – Speisekarte, Feiern, Galerie) */
+.slider--wide {
+  aspect-ratio: 16 / 10; max-width: 960px; margin-inline: auto;
+  border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg); background: linear-gradient(150deg, #efe2c4, #e3d7bd);
+}
+.slider--onmenu { margin-bottom: clamp(34px, 5vw, 52px); }
+@media (max-width: 640px) { .slider--wide { aspect-ratio: 3 / 2; } }
+
+/* ======================================================================
+   ÜBERNACHTEN / GÄSTEZIMMER
+====================================================================== */
+.badge-soon {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-body); font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold-deep); background: var(--cream-deep); padding: 6px 14px; border-radius: var(--radius-pill);
+}
+.stay-cta {
+  max-width: 720px; margin: clamp(34px, 5vw, 48px) auto 0; text-align: center;
+  background: var(--cream-soft); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: clamp(28px, 4vw, 44px); box-shadow: var(--shadow-md);
+}
+.stay-cta h3 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: 14px; }
+.stay-cta p { color: var(--ink-muted); margin-top: 12px; max-width: 54ch; margin-inline: auto; }
+.stay-cta__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; }
+.btn.is-soon { opacity: .65; pointer-events: none; cursor: default; }
+@media (max-width: 560px) { .stay-cta__actions .btn { width: 100%; } }
+
+/* ======================================================================
+   WEIHNACHTS-POPUP
+====================================================================== */
+.xmas-pop {
+  position: fixed; right: 20px; bottom: 20px; z-index: 200;
+  width: min(360px, calc(100vw - 40px));
+  background: var(--green); color: var(--on-green);
+  border-radius: var(--radius-lg); border: 1px solid rgba(243,234,214,.18);
+  box-shadow: var(--shadow-lg); overflow: hidden;
+  transform: translateY(24px); opacity: 0; pointer-events: none;
+  transition: transform .4s ease, opacity .4s ease;
+}
+.xmas-pop.is-open { transform: none; opacity: 1; pointer-events: auto; }
+.xmas-pop__top { height: 4px; background: linear-gradient(90deg, var(--gold-light), var(--gold-deep)); }
+.xmas-pop__body { padding: 20px 22px 22px; position: relative; }
+.xmas-pop__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
+.xmas-pop h4 { color: #fff; font-size: 1.3rem; margin-top: 10px; }
+.xmas-pop p { color: var(--on-green-mut); font-size: .95rem; margin-top: 10px; }
+.xmas-pop p strong { color: #fff; }
+.xmas-pop__actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+.xmas-pop__close { position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; border: none; border-radius: 50%; background: rgba(243,234,214,.14); color: var(--on-green); display: grid; place-items: center; cursor: pointer; transition: background .2s ease; }
+.xmas-pop__close:hover { background: rgba(243,234,214,.3); }

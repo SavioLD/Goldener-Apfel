@@ -151,9 +151,9 @@
     <nav class="topbar__nav" aria-label="Hauptnavigation">
       <a href="#ueber-uns">Über uns</a>
       <a href="#speisekarte">Speisekarte</a>
-      <a href="#terrasse">Terrasse</a>
+      <a href="#zimmer">Übernachten</a>
       <a href="#feiern">Feiern</a>
-      <a href="#impressionen">Galerie</a>
+      <a href="historie.html">Historie</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <a href="#kontakt" class="btn btn--primary btn--sm topbar__cta">
@@ -167,9 +167,11 @@
     <a href="#ueber-uns">Über uns</a>
     <a href="#speisekarte">Speisekarte</a>
     <a href="#terrasse">Terrasse</a>
+    <a href="#zimmer">Übernachten</a>
     <a href="#oeffnungszeiten">Öffnungszeiten</a>
     <a href="#feiern">Feiern</a>
     <a href="#impressionen">Galerie</a>
+    <a href="historie.html">Historie</a>
     <a href="#kontakt">Kontakt</a>
     <a href="#kontakt" class="btn btn--primary btn--block">Tisch reservieren</a>
   </div>
@@ -213,13 +215,19 @@
     </div>
 
     <div class="hero__visual">
-      <figure class="media">
-        <img class="media__photo" src="DJI_20260708162626_0021_D.jpg" alt="Sonniger Gastgarten des Goldenen Apfel mit Sonnenschirmen und Biergartentischen" loading="eager" onerror="this.remove()" />
-        <figcaption class="media__inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
-          <span>Unser Gastgarten mitten in Rottweil</span>
-        </figcaption>
-      </figure>
+<figure class="media slider" data-slider data-autoplay="5000">
+      <div class="slider__slides">
+        <img class="slider__slide is-active" src="DJI_20260708162626_0021_D.jpg" alt="Gastgarten des Goldenen Apfel von oben mit Sonnenschirmen" loading="eager" />
+        <img class="slider__slide" src="DJI_20260708162741_0024_D.jpg" alt="Gastgarten mit Rasenfläche von oben" loading="lazy" />
+        <img class="slider__slide" src="_RG67095-HDR.jpg" alt="Sonnige Terrasse mit Biergartentischen" loading="lazy" />
+        <img class="slider__slide" src="_RG67096-HDR.jpg" alt="Terrasse im Innenhof" loading="lazy" />
+        <img class="slider__slide" src="_RG67185.jpg" alt="Außenansicht mit Wirtshausschild und Rottweiler Testturm" loading="lazy" />
+        <img class="slider__slide" src="DJI_20260708162816_0025_D.jpg" alt="Gastgarten mit Wirtshausschild von oben" loading="lazy" />
+      </div>
+      <button type="button" class="slider__nav slider__nav--prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="slider__nav slider__nav--next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="slider__dots" aria-label="Bildauswahl"></div>
+    </figure>
       <span class="hero__badge"><span class="dot"></span> Täglich ab 17:00 Uhr für Sie geöffnet</span>
     </div>
   </div>
@@ -261,13 +269,19 @@
 <section class="section" id="ueber-uns">
   <div class="shell split">
     <div class="split__media">
-      <figure class="media">
-        <img class="media__photo" src="_RG69570.jpg" alt="Samuel Haftstein, Pächter und Koch im Goldenen Apfel Rottweil" loading="lazy" onerror="this.remove()" />
-        <figcaption class="media__inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 13a4 4 0 0 1-1-7.9A5 5 0 0 1 15 4a4 4 0 0 1 3 7"/><path d="M6 13v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-7"/></svg>
-          <span>Samuel Haftstein</span>
-        </figcaption>
-      </figure>
+<figure class="media slider" data-slider data-autoplay="6000">
+      <div class="slider__slides">
+        <img class="slider__slide is-active" src="_RG69570.jpg" alt="Samuel Haftstein, Pächter und Koch" loading="lazy" />
+        <img class="slider__slide" src="_RG69302.jpg" alt="Samuel Haftstein an der Durchreiche" loading="lazy" />
+        <img class="slider__slide" src="_RG69520.jpg" alt="Samuel Haftstein konzentriert in der Küche" loading="lazy" />
+        <img class="slider__slide" src="_RG69297.jpg" alt="Samuel Haftstein am Küchenfenster" loading="lazy" />
+        <img class="slider__slide" src="_RG69760.jpg" alt="Herzlicher Moment im Team" loading="lazy" />
+        <img class="slider__slide" src="_RG69626.jpg" alt="Persönliche Planung im Team" loading="lazy" />
+      </div>
+      <button type="button" class="slider__nav slider__nav--prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="slider__nav slider__nav--next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="slider__dots" aria-label="Bildauswahl"></div>
+    </figure>
     </div>
     <div class="split__content">
       <span class="eyebrow">Herzlich willkommen</span>
@@ -307,13 +321,18 @@
 <section class="section section--cream" id="terrasse">
   <div class="shell split split--reverse">
     <div class="split__media">
-      <figure class="media">
-        <img class="media__photo" src="_RG67095-HDR.jpg" alt="Gastgarten des Goldenen Apfel mit Rasenfläche, Sonnenschirmen und Biergartentischen" loading="lazy" onerror="this.remove()" />
-        <figcaption class="media__inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg>
-          <span>Unser lauschiger Gastgarten</span>
-        </figcaption>
-      </figure>
+<figure class="media slider" data-slider data-autoplay="6000">
+      <div class="slider__slides">
+        <img class="slider__slide is-active" src="_RG67119.jpg" alt="Biergartentische auf der Terrasse" loading="lazy" />
+        <img class="slider__slide" src="_RG67148.jpg" alt="Biergartentische mit Lampen" loading="lazy" />
+        <img class="slider__slide" src="_RG67115.jpg" alt="Lauschiges Plätzchen im Gastgarten" loading="lazy" />
+        <img class="slider__slide" src="_RG67157.jpg" alt="Deko-Detail mit Bierkrug und Blumen" loading="lazy" />
+        <img class="slider__slide" src="_RG67160.jpg" alt="Gemütliche Ecke im Gastgarten" loading="lazy" />
+      </div>
+      <button type="button" class="slider__nav slider__nav--prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="slider__nav slider__nav--next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="slider__dots" aria-label="Bildauswahl"></div>
+    </figure>
     </div>
     <div class="split__content">
       <span class="eyebrow">Sommer im Goldenen Apfel</span>
@@ -345,11 +364,17 @@
       <p>Frisch zubereitet, ehrlich serviert. Eine kleine, feine Karte – jeden Tag mit Liebe gekocht.</p>
     </div>
 
-    <div class="photo-trio">
-      <figure class="photo"><img src="_RG69474.jpg" alt="Frisch paniertes Schnitzel in der Küche des Goldenen Apfel" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69499.jpg" alt="Schnitzel wird goldbraun in der Pfanne gebraten" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69523.jpg" alt="Fertig gebratene Schnitzel am Pass, mit Salz bestreut" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-    </div>
+    <figure class="slider slider--wide slider--onmenu" data-slider data-autoplay="4500">
+      <div class="slider__slides">
+        <img class="slider__slide is-active" src="_RG69474.jpg" alt="Frisch paniertes Schnitzel" loading="lazy" />
+        <img class="slider__slide" src="_RG69499.jpg" alt="Schnitzel wird goldbraun gebraten" loading="lazy" />
+        <img class="slider__slide" src="_RG69503.jpg" alt="Goldbraunes Schnitzel aus der Pfanne" loading="lazy" />
+        <img class="slider__slide" src="_RG69523.jpg" alt="Fertige Schnitzel am Pass, mit Salz" loading="lazy" />
+      </div>
+      <button type="button" class="slider__nav slider__nav--prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="slider__nav slider__nav--next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="slider__dots" aria-label="Bildauswahl"></div>
+    </figure>
 
     <div class="menu-card">
       <span class="menu-card__ribbon">Unsere Speisekarte</span>
@@ -469,11 +494,19 @@
       </p>
     </div>
 
-    <div class="photo-trio photo-trio--feier">
-      <figure class="photo"><img src="_RG69273.jpg" alt="Festlich gedeckter Tisch mit gold­farbenem Besteck und Stoffservietten" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69730.jpg" alt="Persönliche Planung Ihrer Feier im Goldenen Apfel" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69207.jpg" alt="Gedeckte Tafel für eine Feier im Goldenen Apfel" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-    </div>
+    <figure class="slider slider--wide slider--onmenu" data-slider data-autoplay="5000">
+      <div class="slider__slides">
+        <img class="slider__slide is-active" src="_RG69273.jpg" alt="Festlich gedeckter Tisch mit Goldbesteck" loading="lazy" />
+        <img class="slider__slide" src="_RG69207.jpg" alt="Gedeckte Tafel für eine Feier" loading="lazy" />
+        <img class="slider__slide" src="_RG69325.jpg" alt="Festlich gedeckte Tafel" loading="lazy" />
+        <img class="slider__slide" src="_RG69329.jpg" alt="Gedeckte Tafel mit Weingläsern" loading="lazy" />
+        <img class="slider__slide" src="_RG69344.jpg" alt="Gedeck mit Goldbesteck" loading="lazy" />
+        <img class="slider__slide" src="_RG69244.jpg" alt="Festlich eingedeckt mit Weißwein" loading="lazy" />
+      </div>
+      <button type="button" class="slider__nav slider__nav--prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="slider__nav slider__nav--next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="slider__dots" aria-label="Bildauswahl"></div>
+    </figure>
 
     <div class="events">
       <article class="event-card">
@@ -501,6 +534,55 @@
 </section>
 
 <!-- ============================================================
+     ÜBERNACHTEN / GÄSTEZIMMER
+============================================================= -->
+<section class="section" id="zimmer">
+  <div class="shell">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--solo" style="justify-content:center;">Übernachten</span>
+      <h2>Gästezimmer über dem Goldenen Apfel</h2>
+      <p>Direkt über dem Wirtshaus erwarten Sie drei gemütliche Gästezimmer – ideal für Kurz- und Langaufenthalte, mitten in der Rottweiler Altstadt.</p>
+    </div>
+
+    <div class="events">
+      <article class="event-card">
+        <div class="event-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5M3 18h18M4 18v2M20 18v2M6 11V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3>3 gem&uuml;tliche Zimmer</h3>
+        <p>Drei individuell eingerichtete G&auml;stezimmer direkt &uuml;ber dem Gasthof &ndash; ruhig gelegen und liebevoll gestaltet.</p>
+      </article>
+      <article class="event-card">
+        <div class="event-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Kurz- <span class="amp">&amp;</span> Langaufenthalte</h3>
+        <p>Ob eine Nacht auf der Durchreise oder mehrere Wochen f&uuml;r Beruf und Projekt &ndash; bei uns sind Sie flexibel untergebracht.</p>
+      </article>
+      <article class="event-card">
+        <div class="event-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div>
+        <h3>Mitten in der Altstadt</h3>
+        <p>Zentral in Rottweil &ndash; Restaurants, Testturm und Sehensw&uuml;rdigkeiten sind bequem zu Fu&szlig; erreichbar.</p>
+      </article>
+    </div>
+
+    <div class="stay-cta">
+      <span class="badge-soon">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Online-Buchung folgt in K&uuml;rze
+      </span>
+      <h3>Bald bequem &uuml;ber Airbnb buchbar</h3>
+      <p>Die Online-Reservierung unserer G&auml;stezimmer &uuml;ber Airbnb richten wir gerade ein. Bis dahin fragen Sie Ihr Wunschzimmer einfach direkt bei uns an &ndash; wir helfen Ihnen gern weiter.</p>
+      <div class="stay-cta__actions">
+        <!-- TODO: sobald der Airbnb-Link vorliegt, dieses <span> ersetzen durch:
+             <a href="AIRBNB-LINK" class="btn btn--primary btn--lg" target="_blank" rel="noopener"> ... Auf Airbnb buchen</a> -->
+        <span class="btn btn--primary btn--lg is-soon">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>
+          Auf Airbnb buchen &middot; bald verf&uuml;gbar
+        </span>
+        <a href="#kontakt" class="btn btn--ghost btn--lg">Zimmer anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      IMPRESSIONEN / GALERIE
 ============================================================= -->
 <section class="section section--cream" id="impressionen">
@@ -508,43 +590,30 @@
     <div class="section-head">
       <span class="eyebrow eyebrow--solo" style="justify-content:center;">Einblicke</span>
       <h2>Impressionen aus dem Goldenen Apfel</h2>
-      <p>Ein paar Eindrücke von unseren Stuben, dem Gastgarten, der Küche und dem Team.</p>
+      <p>Klicken Sie sich durch ein paar Eindrücke – von unseren Stuben und der Bar über das Team bis zum historischen Wirtshausschild.</p>
     </div>
 
-    <div class="gallery">
-      <figure class="photo photo--wide"><img src="DJI_20260708162741_0024_D.jpg" alt="Gastgarten von oben mit Rasenfläche" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67185.jpg" alt="Außenansicht mit „Goldener Apfel“-Schild und Rottweiler Testturm" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67096-HDR.jpg" alt="Sonnige Terrasse im Innenhof" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67119.jpg" alt="Biergartentische auf der Terrasse" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo photo--wide"><img src="_RG67203-HDR.jpg" alt="Historische Gaststube mit Holzvertäfelung" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67206-HDR.jpg" alt="Gemütliche Gaststube" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67224-HDR.jpg" alt="Modernes Nebenzimmer" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69281.jpg" alt="Detail: Kachelofen" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69426.jpg" alt="Wand mit historischen Rottweil-Aufnahmen" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69427.jpg" alt="Traditionelle Glücksbringer-Deko" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69268.jpg" alt="„Happiness is Homemade“" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo photo--wide"><img src="_RG69325.jpg" alt="Festlich gedeckte Tafel" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69344.jpg" alt="Gedeck mit Goldbesteck" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69424.jpg" alt="Blumenvase am Fenster" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67157.jpg" alt="Deko-Detail mit Bierkrug und Blumen" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69626.jpg" alt="Persönliche Planung im Team" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo photo--wide"><img src="_RG69804.jpg" alt="An der Bar mit regionalen Bieren" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69817.jpg" alt="Frisch gezapft an der Theke" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69297.jpg" alt="Samuel Haftstein am Küchenfenster" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="DJI_20260708162816_0025_D.jpg" alt="Gastgarten mit Wirtshausschild von oben" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo photo--wide"><img src="_RG69503.jpg" alt="Frisch Goldbraun: Schnitzel aus der Pfanne" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69520.jpg" alt="Samuel Haftstein konzentriert in der Küche" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69302.jpg" alt="Samuel Haftstein an der Durchreiche" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69760.jpg" alt="Herzlicher Moment im Team" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69244.jpg" alt="Festlich eingedeckt mit Weißwein" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo photo--wide"><img src="_RG69329.jpg" alt="Gedeckte Tafel mit Weingläsern" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69277.jpg" alt="Gemütliches Nebenzimmer, festlich eingedeckt" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67115.jpg" alt="Lauschiges Plätzchen im Gastgarten" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67148.jpg" alt="Biergartentische mit Lampen" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG67160.jpg" alt="Blick in die Gaststube" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69306.jpg" alt="Das historische Wirtshausschild" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-      <figure class="photo"><img src="_RG69321.jpg" alt="„Goldener Apfel“ – Wirtshausschild in der Altstadt" loading="lazy" onerror="this.closest('.photo').remove()" /></figure>
-    </div>
+    <figure class="slider slider--wide" data-slider data-autoplay="5000">
+      <div class="slider__slides">
+        <img class="slider__slide is-active" src="_RG67203-HDR.jpg" alt="Historische Gaststube mit Holzvertäfelung" loading="lazy" />
+        <img class="slider__slide" src="_RG67206-HDR.jpg" alt="Gemütliche Gaststube" loading="lazy" />
+        <img class="slider__slide" src="_RG67224-HDR.jpg" alt="Modernes Nebenzimmer" loading="lazy" />
+        <img class="slider__slide" src="_RG69277.jpg" alt="Festlich eingedecktes Nebenzimmer" loading="lazy" />
+        <img class="slider__slide" src="_RG69281.jpg" alt="Detail: Kachelofen" loading="lazy" />
+        <img class="slider__slide" src="_RG69426.jpg" alt="Wand mit historischen Rottweil-Aufnahmen" loading="lazy" />
+        <img class="slider__slide" src="_RG69427.jpg" alt="Traditionelle Glücksbringer-Deko" loading="lazy" />
+        <img class="slider__slide" src="_RG69268.jpg" alt="„Happiness is Homemade“" loading="lazy" />
+        <img class="slider__slide" src="_RG69424.jpg" alt="Blumenvase am Fenster" loading="lazy" />
+        <img class="slider__slide" src="_RG69804.jpg" alt="An der Bar mit regionalen Bieren" loading="lazy" />
+        <img class="slider__slide" src="_RG69817.jpg" alt="Frisch gezapft an der Theke" loading="lazy" />
+        <img class="slider__slide" src="_RG69730.jpg" alt="Persönliche Planung im Team" loading="lazy" />
+        <img class="slider__slide" src="_RG69306.jpg" alt="Das historische Wirtshausschild" loading="lazy" />
+        <img class="slider__slide" src="_RG69321.jpg" alt="Wirtshausschild in der Altstadt" loading="lazy" />
+      </div>
+      <button type="button" class="slider__nav slider__nav--prev" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button type="button" class="slider__nav slider__nav--next" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="slider__dots" aria-label="Bildauswahl"></div>
+    </figure>
   </div>
 </section>
 
@@ -629,6 +698,8 @@
             <option value="Firmenfeier">Firmenfeier</option>
             <option value="Taufe / Familienfest">Taufe / Familienfest</option>
             <option value="Geburtstag / Jubiläum">Geburtstag / Jubiläum</option>
+            <option value="Zimmeranfrage / Übernachtung">Zimmeranfrage / Übernachtung</option>
+            <option value="Weihnachtsmenü (25./26. Dezember)">Weihnachtsmenü (25./26. Dezember)</option>
             <option value="Allgemeine Frage">Allgemeine Frage</option>
           </select>
         </div>
@@ -704,9 +775,11 @@
           <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#speisekarte">Speisekarte</a></li>
           <li><a href="#terrasse">Terrasse & Gastgarten</a></li>
+          <li><a href="#zimmer">Übernachten</a></li>
           <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
           <li><a href="#feiern">Feiern & Anlässe</a></li>
           <li><a href="#impressionen">Galerie</a></li>
+          <li><a href="historie.html">Historie</a></li>
           <li><a href="#kontakt">Kontakt & Reservierung</a></li>
         </ul>
       </div>
@@ -728,6 +801,23 @@
   </div>
 </footer>
 
+<!-- ============================================================
+     WEIHNACHTS-POPUP
+============================================================= -->
+<aside class="xmas-pop" id="xmasPop" role="dialog" aria-label="Weihnachten im Goldenen Apfel" aria-hidden="true">
+  <div class="xmas-pop__top"></div>
+  <button type="button" class="xmas-pop__close" id="xmasClose" aria-label="Schließen"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <div class="xmas-pop__body">
+    <span class="xmas-pop__eyebrow"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 9 8l-6 1 5 4-1 7 5-3 5 3-1-7 5-4-6-1z"/></svg> Festtage im Goldenen Apfel</span>
+    <h4>Weihnachtsmenü auf Vorbestellung</h4>
+    <p>An den Feiertagen – <strong>25. &amp; 26. Dezember</strong> – verwöhnen wir Sie mit einem festlichen Weihnachtsmenü auf Reservierung. Sichern Sie sich rechtzeitig Ihren Tisch.</p>
+    <div class="xmas-pop__actions">
+      <a href="#kontakt" class="btn btn--primary btn--sm" id="xmasCta">Menü reservieren</a>
+      <button type="button" class="btn btn--on-green btn--sm" id="xmasLater">Später</button>
+    </div>
+  </div>
+</aside>
+
 <script>
   // Mobile-Navigation
   const burger = document.getElementById('burger');
@@ -746,15 +836,78 @@
   // Jahr im Footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Vorauswahl: Klick auf "Feier anfragen" setzt das Anliegen-Feld
+  // Anliegen im Formular je nach geklicktem Button vorbelegen
+  function presetAnliegen(v){ var s = document.getElementById('cf-anliegen'); if (s) s.value = v; }
   document.querySelectorAll('a[href="#kontakt"]').forEach(function (link) {
-    if (/feier anfragen/i.test(link.textContent)) {
-      link.addEventListener('click', function () {
-        var sel = document.getElementById('cf-anliegen');
-        if (sel) sel.value = 'Firmenfeier';
+    var t = (link.textContent || '').toLowerCase();
+    var v = /feier anfragen/.test(t) ? 'Firmenfeier'
+          : /zimmer/.test(t)        ? 'Zimmeranfrage / Übernachtung'
+          : null;
+    if (v) link.addEventListener('click', function () { presetAnliegen(v); });
+  });
+
+  // Slideshows / Slider
+  document.querySelectorAll('[data-slider]').forEach(function (sl) {
+    var slides = Array.prototype.slice.call(sl.querySelectorAll('.slider__slide'));
+    var dotsWrap = sl.querySelector('.slider__dots');
+    var prev = sl.querySelector('.slider__nav--prev');
+    var next = sl.querySelector('.slider__nav--next');
+    if (slides.length <= 1) {
+      if (dotsWrap) dotsWrap.remove();
+      if (prev) prev.remove();
+      if (next) next.remove();
+      return;
+    }
+    var i = slides.findIndex(function (x) { return x.classList.contains('is-active'); });
+    if (i < 0) { i = 0; slides[0].classList.add('is-active'); }
+    var dots = [];
+    if (dotsWrap) {
+      slides.forEach(function (_, k) {
+        var d = document.createElement('button');
+        d.type = 'button'; d.className = 'slider__dot' + (k === i ? ' is-active' : '');
+        d.setAttribute('aria-label', 'Bild ' + (k + 1));
+        d.addEventListener('click', function () { go(k); restart(); });
+        dotsWrap.appendChild(d); dots.push(d);
       });
     }
+    function go(k) {
+      slides[i].classList.remove('is-active'); if (dots[i]) dots[i].classList.remove('is-active');
+      i = (k + slides.length) % slides.length;
+      slides[i].classList.add('is-active'); if (dots[i]) dots[i].classList.add('is-active');
+      slides[i].loading = 'eager';
+    }
+    if (prev) prev.addEventListener('click', function () { go(i - 1); restart(); });
+    if (next) next.addEventListener('click', function () { go(i + 1); restart(); });
+    var delay = parseInt(sl.getAttribute('data-autoplay') || '0', 10), timer = null;
+    function start() { if (delay > 0) timer = setInterval(function () { go(i + 1); }, delay); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function restart() { stop(); start(); }
+    sl.addEventListener('mouseenter', stop); sl.addEventListener('mouseleave', start);
+    var x0 = null;
+    sl.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    sl.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { go(dx < 0 ? i + 1 : i - 1); }
+      x0 = null; start();
+    }, { passive: true });
+    start();
   });
+
+  // Weihnachts-Popup (einmal pro Browser-Sitzung)
+  (function () {
+    var pop = document.getElementById('xmasPop'); if (!pop) return;
+    try { if (sessionStorage.getItem('ga_xmas_dismissed') === '1') return; } catch (e) {}
+    function dismiss() {
+      pop.classList.remove('is-open'); pop.setAttribute('aria-hidden', 'true');
+      try { sessionStorage.setItem('ga_xmas_dismissed', '1'); } catch (e) {}
+    }
+    var c = document.getElementById('xmasClose'); if (c) c.addEventListener('click', dismiss);
+    var l = document.getElementById('xmasLater'); if (l) l.addEventListener('click', dismiss);
+    var cta = document.getElementById('xmasCta');
+    if (cta) cta.addEventListener('click', function () { presetAnliegen('Weihnachtsmenü (25./26. Dezember)'); dismiss(); });
+    setTimeout(function () { pop.classList.add('is-open'); pop.setAttribute('aria-hidden', 'false'); }, 6000);
+  })();
 </script>
 
 </body>
