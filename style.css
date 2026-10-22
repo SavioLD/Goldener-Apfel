@@ -504,3 +504,23 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .xmas-pop__actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
 .xmas-pop__close { position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; border: none; border-radius: 50%; background: rgba(243,234,214,.14); color: var(--on-green); display: grid; place-items: center; cursor: pointer; transition: background .2s ease; }
 .xmas-pop__close:hover { background: rgba(243,234,214,.3); }
+
+/* ======================================================================
+   INTRO-VIDEO (YouTube Short, hochkant)
+====================================================================== */
+.intro-wrap { display: grid; grid-template-columns: 1fr .82fr; gap: clamp(28px, 4vw, 60px); align-items: center; }
+.intro-text h2 { color: #fff; font-size: clamp(1.9rem, 4vw, 2.8rem); margin-top: 14px; }
+.intro-text p { color: var(--on-green-mut); margin-top: 16px; max-width: 48ch; }
+.intro-text .btn { margin-top: 26px; }
+.intro-video { display: flex; justify-content: center; }
+.phone-frame {
+  position: relative; width: min(300px, 78vw); aspect-ratio: 9 / 16;
+  border-radius: 28px; overflow: hidden; background: #000;
+  box-shadow: var(--shadow-lg); border: 1px solid rgba(243,234,214,.18);
+}
+.phone-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 860px) {
+  .intro-wrap { grid-template-columns: 1fr; }
+  .intro-text { text-align: center; }
+  .intro-text p { margin-inline: auto; }
+}
