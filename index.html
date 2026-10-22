@@ -276,13 +276,13 @@
     </div>
     <div class="intro-video">
       <div class="phone-frame">
-        <iframe
-          src="https://www.youtube.com/embed/q_JDxN8BaOk?autoplay=1&mute=1&loop=1&playlist=q_JDxN8BaOk&controls=1&playsinline=1&rel=0"
-          title="Intro-Video – Goldener Apfel Rottweil"
-          loading="lazy"
-          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+        <video id="introVideo" class="intro-player" controls playsinline preload="none" poster="poster-intro.jpg">
+          <source src="intro.mp4" type="video/mp4" />
+          Ihr Browser kann dieses Video leider nicht abspielen. <a href="intro.mp4">Video herunterladen</a>.
+        </video>
+        <button type="button" class="intro-play" id="introPlay" aria-label="Imagefilm abspielen">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -919,6 +919,15 @@
     }, { passive: true });
     start();
   });
+
+  // Intro-Video: Play-Button
+  (function () {
+    var v = document.getElementById('introVideo'), b = document.getElementById('introPlay');
+    if (!v || !b) return;
+    b.addEventListener('click', function () { v.play(); });
+    v.addEventListener('play', function () { b.classList.add('is-hidden'); });
+    v.addEventListener('ended', function () { b.classList.remove('is-hidden'); });
+  })();
 
   // Weihnachts-Popup (einmal pro Browser-Sitzung)
   (function () {

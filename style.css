@@ -527,3 +527,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Original-Logo-Emblem: im Footer (dunkelgrün) auf cremefarbenem Medaillon sichtbar machen */
 .footer__brand .topbar__logo img { background: var(--cream); border-radius: 50%; padding: 7px; }
+
+/* Intro-Video-Player (selbst gehostet) */
+.phone-frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; background: #000; z-index: 1; }
+.intro-play {
+  position: absolute; inset: 0; margin: auto; z-index: 3;
+  width: 74px; height: 74px; border: none; border-radius: 50%; cursor: pointer;
+  background: rgba(184,151,90,.94); color: #2a2113; display: grid; place-items: center;
+  box-shadow: var(--shadow-lg); transition: transform .15s ease, background .2s ease;
+}
+.intro-play svg { margin-left: 4px; }
+.intro-play:hover { transform: scale(1.06); background: var(--gold-light); }
+.intro-play.is-hidden { display: none; }
