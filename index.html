@@ -746,10 +746,28 @@
           <input type="email" id="cf-mail" name="email" required autocomplete="email" />
         </div>
 
+        <div class="field">
+          <label for="cf-datum">Wunschdatum</label>
+          <input type="date" id="cf-datum" name="Wunschdatum" />
+          <small class="field-hint" id="datumHint"></small>
+        </div>
+
         <div class="field field--row">
           <div>
-            <label for="cf-datum">Wunschdatum</label>
-            <input type="date" id="cf-datum" name="Wunschdatum" />
+            <label for="cf-zeit">Uhrzeit</label>
+            <select id="cf-zeit" name="Uhrzeit">
+              <option value="">— Uhrzeit wählen —</option>
+              <option>17:00</option>
+              <option>17:30</option>
+              <option>18:00</option>
+              <option>18:30</option>
+              <option>19:00</option>
+              <option>19:30</option>
+              <option>20:00</option>
+              <option>20:30</option>
+              <option>21:00</option>
+              <option value="Nach Absprache">Andere Uhrzeit (nach Absprache)</option>
+            </select>
           </div>
           <div>
             <label for="cf-personen">Anzahl Personen</label>
@@ -871,6 +889,37 @@
           : null;
     if (v) link.addEventListener('click', function () { presetAnliegen(v); });
   });
+
+  // Reservierungs-Regeln: reguläre Tischreservierung nur Mo–Fr; Hinweis zu Öffnungszeiten.
+  // (Feiern/Taufen usw. bleiben an Wochenenden & zu freien Zeiten möglich.)
+  (function () {
+    var anliegen = document.getElementById('cf-anliegen');
+    var datum = document.getElementById('cf-datum');
+    var hint = document.getElementById('datumHint');
+    if (!datum) return;
+    try { datum.min = new Date().toISOString().slice(0, 10); } catch (e) {}
+    function normal() { return !anliegen || anliegen.value === 'Tischreservierung'; }
+    function setHint(msg, warn) { if (!hint) return; hint.textContent = msg; hint.classList.toggle('is-warn', !!warn); }
+    function baseHint() {
+      if (normal()) setHint('Reguläre Tischreservierungen: Montag bis Freitag, ab 17:00 Uhr (warme Küche bis 21:00 Uhr).', false);
+      else setHint('Für Feiern & besondere Anlässe sind auch Wochenenden und individuelle Zeiten möglich – geben Sie Ihren Wunsch einfach an.', false);
+    }
+    function check() {
+      if (normal() && datum.value) {
+        var day = new Date(datum.value + 'T00:00:00').getDay(); // 0 = So, 6 = Sa
+        if (day === 0 || day === 6) {
+          datum.value = '';
+          setHint('An Wochenenden nehmen wir keine regulären Tischreservierungen an – bitte ein Datum von Montag bis Freitag wählen. Für eine Feier am Wochenende oben bei „Ihr Anliegen" z. B. „Firmenfeier" oder „Taufe / Familienfest" auswählen.', true);
+          return;
+        }
+      }
+      baseHint();
+    }
+    if (anliegen) anliegen.addEventListener('change', check);
+    datum.addEventListener('change', check);
+    datum.addEventListener('input', check);
+    baseHint();
+  })();
 
   // Slideshows / Slider
   document.querySelectorAll('[data-slider]').forEach(function (sl) {

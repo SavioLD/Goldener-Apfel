@@ -548,3 +548,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .topbar__wordmark b { font-size: 1.02rem; }
   .topbar__wordmark small { font-size: .66rem; }
 }
+
+/* Hinweis unter Formularfeldern (z. B. Reservierungs-Regeln) */
+.field-hint { display: block; margin-top: 7px; font-size: .82rem; line-height: 1.5; color: var(--ink-soft); }
+.field-hint.is-warn { color: #b23b2e; font-weight: 500; }
