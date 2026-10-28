@@ -725,7 +725,6 @@
             <option value="Taufe / Familienfest">Taufe / Familienfest</option>
             <option value="Geburtstag / Jubiläum">Geburtstag / Jubiläum</option>
             <option value="Zimmeranfrage / Übernachtung">Zimmeranfrage / Übernachtung</option>
-            <option value="Weihnachtsmenü (25./26. Dezember)">Weihnachtsmenü (25./26. Dezember)</option>
             <option value="Allgemeine Frage">Allgemeine Frage</option>
           </select>
         </div>
@@ -845,23 +844,6 @@
   </div>
 </footer>
 
-<!-- ============================================================
-     WEIHNACHTS-POPUP
-============================================================= -->
-<aside class="xmas-pop" id="xmasPop" role="dialog" aria-label="Weihnachten im Goldenen Apfel" aria-hidden="true">
-  <div class="xmas-pop__top"></div>
-  <button type="button" class="xmas-pop__close" id="xmasClose" aria-label="Schließen"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-  <div class="xmas-pop__body">
-    <span class="xmas-pop__eyebrow"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 9 8l-6 1 5 4-1 7 5-3 5 3-1-7 5-4-6-1z"/></svg> Festtage im Goldenen Apfel</span>
-    <h4>Weihnachtsmenü auf Vorbestellung</h4>
-    <p>An den Feiertagen – <strong>25. &amp; 26. Dezember</strong> – verwöhnen wir Sie mit einem festlichen Weihnachtsmenü auf Reservierung. Sichern Sie sich rechtzeitig Ihren Tisch.</p>
-    <div class="xmas-pop__actions">
-      <a href="#kontakt" class="btn btn--primary btn--sm" id="xmasCta">Menü reservieren</a>
-      <button type="button" class="btn btn--on-green btn--sm" id="xmasLater">Später</button>
-    </div>
-  </div>
-</aside>
-
 <script>
   // Mobile-Navigation
   const burger = document.getElementById('burger');
@@ -976,21 +958,6 @@
     b.addEventListener('click', function () { v.play(); });
     v.addEventListener('play', function () { b.classList.add('is-hidden'); });
     v.addEventListener('ended', function () { b.classList.remove('is-hidden'); });
-  })();
-
-  // Weihnachts-Popup (einmal pro Browser-Sitzung)
-  (function () {
-    var pop = document.getElementById('xmasPop'); if (!pop) return;
-    try { if (sessionStorage.getItem('ga_xmas_dismissed') === '1') return; } catch (e) {}
-    function dismiss() {
-      pop.classList.remove('is-open'); pop.setAttribute('aria-hidden', 'true');
-      try { sessionStorage.setItem('ga_xmas_dismissed', '1'); } catch (e) {}
-    }
-    var c = document.getElementById('xmasClose'); if (c) c.addEventListener('click', dismiss);
-    var l = document.getElementById('xmasLater'); if (l) l.addEventListener('click', dismiss);
-    var cta = document.getElementById('xmasCta');
-    if (cta) cta.addEventListener('click', function () { presetAnliegen('Weihnachtsmenü (25./26. Dezember)'); dismiss(); });
-    setTimeout(function () { pop.classList.add('is-open'); pop.setAttribute('aria-hidden', 'false'); }, 6000);
   })();
 </script>
 

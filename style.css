@@ -482,28 +482,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn.is-soon { opacity: .65; pointer-events: none; cursor: default; }
 @media (max-width: 560px) { .stay-cta__actions .btn { width: 100%; } }
 
-/* ======================================================================
-   WEIHNACHTS-POPUP
-====================================================================== */
-.xmas-pop {
-  position: fixed; right: 20px; bottom: 20px; z-index: 200;
-  width: min(360px, calc(100vw - 40px));
-  background: var(--green); color: var(--on-green);
-  border-radius: var(--radius-lg); border: 1px solid rgba(243,234,214,.18);
-  box-shadow: var(--shadow-lg); overflow: hidden;
-  transform: translateY(24px); opacity: 0; pointer-events: none;
-  transition: transform .4s ease, opacity .4s ease;
-}
-.xmas-pop.is-open { transform: none; opacity: 1; pointer-events: auto; }
-.xmas-pop__top { height: 4px; background: linear-gradient(90deg, var(--gold-light), var(--gold-deep)); }
-.xmas-pop__body { padding: 20px 22px 22px; position: relative; }
-.xmas-pop__eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); }
-.xmas-pop h4 { color: #fff; font-size: 1.3rem; margin-top: 10px; }
-.xmas-pop p { color: var(--on-green-mut); font-size: .95rem; margin-top: 10px; }
-.xmas-pop p strong { color: #fff; }
-.xmas-pop__actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
-.xmas-pop__close { position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; border: none; border-radius: 50%; background: rgba(243,234,214,.14); color: var(--on-green); display: grid; place-items: center; cursor: pointer; transition: background .2s ease; }
-.xmas-pop__close:hover { background: rgba(243,234,214,.3); }
 
 /* ======================================================================
    INTRO-VIDEO (YouTube Short, hochkant)
