@@ -715,7 +715,7 @@
         <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
         <h3>Anfrage senden</h3>
-        <p>Wir melden uns so schnell wie möglich bei Ihnen zurück.</p>
+        <p>Ihre Reservierung ist zunächst eine <strong>Anfrage</strong> – verbindlich reserviert ist sie erst, wenn wir sie Ihnen <strong>bestätigt</strong> haben. Wir melden uns so schnell wie möglich bei Ihnen zurück.</p>
 
         <div class="field">
           <label for="cf-anliegen">Ihr Anliegen <span class="req">*</span></label>
@@ -788,7 +788,7 @@
           Anfrage absenden
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
-        <p class="form-note">Mit * markierte Felder sind Pflichtfelder.</p>
+        <p class="form-note">Mit * markierte Felder sind Pflichtfelder. · Anfragen bitte mindestens 2 Tage im Voraus. Verbindlich erst nach unserer Bestätigung.</p>
       </form>
     </div>
   </div>
@@ -879,14 +879,24 @@
     var datum = document.getElementById('cf-datum');
     var hint = document.getElementById('datumHint');
     if (!datum) return;
-    try { datum.min = new Date().toISOString().slice(0, 10); } catch (e) {}
+    var minDate = '';
+    try {
+      var _d = new Date(); _d.setHours(0, 0, 0, 0); _d.setDate(_d.getDate() + 2);
+      minDate = _d.toISOString().slice(0, 10);
+      datum.min = minDate;
+    } catch (e) {}
     function normal() { return !anliegen || anliegen.value === 'Tischreservierung'; }
     function setHint(msg, warn) { if (!hint) return; hint.textContent = msg; hint.classList.toggle('is-warn', !!warn); }
     function baseHint() {
-      if (normal()) setHint('Reguläre Tischreservierungen: Montag bis Freitag, ab 17:00 Uhr (warme Küche bis 21:00 Uhr).', false);
-      else setHint('Für Feiern & besondere Anlässe sind auch Wochenenden und individuelle Zeiten möglich – geben Sie Ihren Wunsch einfach an.', false);
+      if (normal()) setHint('Reguläre Tischreservierungen: Montag bis Freitag, ab 17:00 Uhr (warme Küche bis 21:00 Uhr). Bitte mindestens 2 Tage im Voraus anfragen.', false);
+      else setHint('Für Feiern & besondere Anlässe sind auch Wochenenden und individuelle Zeiten möglich – bitte mindestens 2 Tage im Voraus anfragen.', false);
     }
     function check() {
+      if (datum.value && minDate && datum.value < minDate) {
+        datum.value = '';
+        setHint('Reservierungsanfragen sind frühestens 2 Tage im Voraus möglich – bitte ein etwas späteres Datum wählen.', true);
+        return;
+      }
       if (normal() && datum.value) {
         var day = new Date(datum.value + 'T00:00:00').getDay(); // 0 = So, 6 = Sa
         if (day === 0 || day === 6) {
