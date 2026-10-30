@@ -706,7 +706,7 @@
       ==================================================================== -->
       <form class="contact-form" id="contactForm"
             action="https://api.web3forms.com/submit"
-            method="POST" novalidate>
+            method="POST">
         <input type="hidden" name="access_key" value="9dcb1f3d-d1bd-4048-874e-727486fde3ff" />
         <input type="hidden" name="subject" value="Neue Anfrage – Goldener Apfel" />
         <input type="hidden" name="from_name" value="Goldener Apfel · Website" />
@@ -746,15 +746,15 @@
         </div>
 
         <div class="field">
-          <label for="cf-datum">Wunschdatum</label>
-          <input type="date" id="cf-datum" name="Wunschdatum" />
+          <label for="cf-datum">Wunschdatum <span class="req">*</span></label>
+          <input type="date" id="cf-datum" name="Wunschdatum" required />
           <small class="field-hint" id="datumHint"></small>
         </div>
 
         <div class="field field--row">
           <div>
-            <label for="cf-zeit">Uhrzeit</label>
-            <select id="cf-zeit" name="Uhrzeit">
+            <label for="cf-zeit">Uhrzeit <span class="req">*</span></label>
+            <select id="cf-zeit" name="Uhrzeit" required>
               <option value="">— Uhrzeit wählen —</option>
               <option>17:00</option>
               <option>17:30</option>
