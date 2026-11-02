@@ -881,8 +881,9 @@
     if (!datum) return;
     var minDate = '';
     try {
-      var _d = new Date(); _d.setHours(0, 0, 0, 0); _d.setDate(_d.getDate() + 2);
-      minDate = _d.toISOString().slice(0, 10);
+      var _d = new Date(); _d.setDate(_d.getDate() + 2);
+      var _mm = ('0' + (_d.getMonth() + 1)).slice(-2), _dd = ('0' + _d.getDate()).slice(-2);
+      minDate = _d.getFullYear() + '-' + _mm + '-' + _dd;   // lokales Datum (kein UTC-Versatz)
       datum.min = minDate;
     } catch (e) {}
     function normal() { return !anliegen || anliegen.value === 'Tischreservierung'; }
@@ -910,6 +911,14 @@
     if (anliegen) anliegen.addEventListener('change', check);
     datum.addEventListener('change', check);
     datum.addEventListener('input', check);
+    var _form = document.getElementById('contactForm');
+    if (_form) _form.addEventListener('submit', function (e) {
+      if (datum.value && minDate && datum.value < minDate) {
+        e.preventDefault();
+        check();
+        datum.reportValidity && datum.reportValidity();
+      }
+    });
     baseHint();
   })();
 
